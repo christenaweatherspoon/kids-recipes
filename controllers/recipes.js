@@ -1,14 +1,14 @@
 const express = require("express")
 const router = express.Router()
-const Recipe = require('../models/recipe')
+const Recipe = require('../models/recipes')
 
 let username = ''
 
-router.get('/new', (req.res) => {
+router.get('/new', (req,res) => {
   res.render('new')
 })
 
-router.get('/:id', (req.res) => {
+router.get('/:id', (req,res) => {
   Recipe.findById(req.params.id)
   .then( (recipes) => {
     res.render('show', {recipes, user:req.params})
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
     res.render('recipes-index', {user: req.user.local.email, recipes})
   })
   .catch(err => console.log(err))
-)}
+})
 
 router.get('/edit/:id', (req, res) => {
   Recipe.findOne({_id: req.params.id})
