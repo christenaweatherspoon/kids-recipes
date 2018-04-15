@@ -10,8 +10,8 @@ app.use(methodOverride('_method'))
 app.use('/recipes/assets', express.static('public'))
 app.use(parser.urlencoded({ extended: true }))
 
-const recipesController = require('./controllers/recipes')
-const loginController = require('./controllers/login')
+const recipesController = require('./controllers/recipesControllrt')
+const loginController = require('./controllers/usersController')
 
 app.get('/', (req, res) => { 
   res.render('index')
