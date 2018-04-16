@@ -10,7 +10,7 @@ router.get('/new', (req,res) => {
 
 router.get('/:id', (req,res) => {
 
-  Recipe.findById(req.params.id)
+  Recipes.findById(req.params.id)
     .then( (recipes ) => {
         res.render('show', { recipes, user: req.params.user } )
     })
