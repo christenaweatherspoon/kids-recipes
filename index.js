@@ -18,4 +18,8 @@ app.get('/', (req, res) => {
 
 app.use("/recipes", recipesController)
 
-app.listen(3000, () => console.log("Running on port http://localhost:3000!"))
+app.set('port', process.env.PORT || 3001)
+
+  app.listen(app.get('port'), () => {
+    console.log(`✅ PORT: ${app.get('port')} 🌟`)
+  })
