@@ -11,13 +11,13 @@ app.use('/recipes/assets', express.static('public'))
 app.use(parser.urlencoded({ extended: true }))
 
 const recipesController = require('./controllers/recipes')
-const usersController = require('./controllers/users')
+const loginController = require('./controllers/login')
 
 app.get('/', (req, res) => { 
   res.render('index')
 })
 
-app.use('/login', usersController)
+app.use('/login', loginController)
 
 app.use("/recipes", recipesController)
 
