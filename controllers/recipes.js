@@ -12,23 +12,18 @@ router.get('/:id', (req,res) => {
 
   Recipes.findById(req.params.id)
     .then( (recipes ) => {
-        res.render('show', { recipes, user: req.params.user } )
+        res.render('show', { recipes} )
     })
     .catch( err => console.log(err))
 });
 
 router.get('/', (req, res) => {
-    username = res.locals.username
-
-    console.log('testing res locals', username)
-    console.log('testing req locals', req.body.username)
-
     Recipes.find({})
       .then(recipes => {
-        res.render('recipes-index', { recipes, user: req.params.user });
+        res.render('recipes-index', { recipes });
       })
       .catch(err => console.log(err))
-});
+})
 
 router.get('/edit/:id', (req, res) => {
   Recipes.findOne({ _id: req.params.id } )

@@ -13,7 +13,7 @@ app.use(parser.urlencoded({ extended: true }))
 const recipesController = require('./controllers/recipes')
 
 app.get('/', (req, res) => { 
-  res.render('index')
+  res.render('landing')
 })
 
 app.use("/recipes", recipesController)
