@@ -1,6 +1,6 @@
 const recipe = require('../models/recipes')
 
-const seedData = require("./seeds.json")
+const seedData = require('./seeds.json')
 
 recipes.remove({})
   .then(() => {

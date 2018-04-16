@@ -1,0 +1,15 @@
+<h2>Edit Recipe:</h2>
+<form action="/recipes/{{recipes.id}}?_method=put" method="post">
+  <label>Name</label>
+  <input type="text" name="name" value="{{recipes.name}}">
+  <label>Ingredients</label>
+  <input type="text" name="ingredients" value="{{recipes.ingredients}}">
+  <label>Steps</label>
+  <input type="text" name="steps" value="{{recipes.steps}}">
+  <input type="submit" value="Edit">
+</form>
+
+<form action="/recipes/{{recipes.id}}?_method=delete" method="post">
+  <input type="submit" value="Remove">
+</form>
+<a href="/recipes/">Recipes!</a>

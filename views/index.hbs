@@ -1,12 +1,15 @@
-<h1>RECIPES!</h1>
+<h1 style="font-size:100px;">Recipes</h1>
 
-<ul>
-  {{#each recipes as |resipes|}}
-    <li>
-      {{recipes.name}}
-      {{recipes.ingredients}}
-      {{recipes.instructions}}
-      {{recipes.user}}
-    </li>
+<table>
+  {{#each recipes as |recipe|}}
+  <tr>
+    <td>
+      <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
+    </td>
+    <td>
+      <a href="/recipes/edit/{{recipe.id}}">Edit</a> 
+    </td>
+  </tr>
   {{/each}}
-</ul>
+</table>
+<br>
