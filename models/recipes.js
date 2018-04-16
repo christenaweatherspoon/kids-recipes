@@ -1,4 +1,4 @@
-const mongoose = require("..db/connection")
+const mongoose = require("../db/connection")
 
 const recipesSchema = new mongoose.Schema({
   name: String,
@@ -6,5 +6,6 @@ const recipesSchema = new mongoose.Schema({
   instructions: String
 })
 
+const recipes = mongoose.model("recipes", recipesSchema)
 
-module.exports = recipe
+module.exports = recipes
