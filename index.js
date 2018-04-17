@@ -7,7 +7,7 @@ const app = express()
 app.set("view engine", "hbs")
 
 app.use(methodOverride('_method'))
-app.use('/recipes/assets', express.static('public'))
+app.use('/assets', express.static('public'))
 app.use(parser.urlencoded({ extended: true }))
 
 const recipesController = require('./controllers/recipes')
