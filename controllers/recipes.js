@@ -2,7 +2,6 @@ const express = require("express")
 const router = express.Router()
 const Recipes = require('../models/recipes')
 
-let username = ''
 
 router.get('/new', (req,res) => {
   res.render('new')
@@ -53,4 +52,10 @@ router.delete('/:id', (req, res) => {
       })
   })
 
+router.get('', req, res) => {
+  Recipes.create(req.body)
+  .then( 
+    res.redirect ('/recipes')
+}
+ 
 module.exports = router

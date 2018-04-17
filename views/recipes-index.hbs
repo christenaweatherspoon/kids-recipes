@@ -1,21 +1,41 @@
 <h1>Recipes:</h1>
 
-<table>
+{{!-- <table> --}}
   {{#each recipes as |recipe|}}
-  <tr>
-    <td>
+  {{!-- <tr> --}}
+
+    {{!-- <div id="star-rating">
+    <input type="radio" name="example" class="rating" value="1" />
+    <input type="radio" name="example" class="rating" value="2" />
+    <input type="radio" name="example" class="rating" value="3" />
+    <input type="radio" name="example" class="rating" value="4" />
+    <input type="radio" name="example" class="rating" value="5" />
+</div> --}}
+    {{!-- <td> --}}
       <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
-    </td>
-    <td>
+    {{!-- </td>
+    <td> --}}
       {{ recipe.user }}
       <a href="{{ user }} /recipes/edit/{{recipe.id}}">Edit</a> 
-    </td>
-  </tr>
+    {{!-- </td>
+  </tr> --}}
+
+
   {{/each}}
-</table>
+{{!-- </table> --}}
 
 <br>
 <a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a>
+
+{{!-- <script>                  
+    $('#star-rating').rating()
+ $('#star-rating').rating(function(vote, event){
+        $.ajax({
+            url: "/get_votes.php", build out route here and on app side what to put in db
+            type: "GET",
+            data: {rate: vote},
+        })
+</script>
 
 
 
@@ -27,3 +47,6 @@ form:
 a form with one 
 
 --}}
+
+{{!-- 
+post in the route console log in the route --}} --}}
