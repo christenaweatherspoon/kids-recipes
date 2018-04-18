@@ -2,17 +2,35 @@
 
 <table>
   {{#each recipes as |recipe|}}
-  <tr>
-    <td>
+  {{!-- <tr>
+    <td> --}}
       <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
-    </td>
-    <td>
-      {{ recipe.user }}
-      <a href="{{ user }} /recipes/edit/{{recipe.id}}">Edit</a> 
-    </td>
-  </tr>
+    {{!-- </td>
+    <td> --}}
+      {{!-- {{ recipe.user }}
+      <a href="{{ user }} /recipes/edit/{{recipe.id}}">Edit</a>  --}}
+    {{!-- </td>
+  </tr> --}}
   {{/each}}
-</table>
+{{!-- </table> --}}
+
+
+ <div class="grid ">
+ 
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+ <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+
+
+ </div>
+
 
 <br>
 <a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a>
