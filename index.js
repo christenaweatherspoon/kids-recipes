@@ -8,7 +8,7 @@ app.set("view engine", "hbs")
 
 app.use(methodOverride('_method'))
 
-app.use(express.static('public'))
+app.use('/assets', express.static('public'))
 
 app.use(parser.urlencoded({ extended: true }))
 
@@ -17,6 +17,7 @@ const recipesController = require('./controllers/recipes')
 app.get('/', (req, res) => { 
   res.render('landing')
 })
+
 
 app.use("/recipes", recipesController)
 

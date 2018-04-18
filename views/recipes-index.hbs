@@ -1,41 +1,75 @@
+
 <h1>Recipes:</h1>
 
 <table>
   {{#each recipes as |recipe|}}
   {{!-- <tr>
     <td> --}}
-      <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
+      {{!-- <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a> --}}
     {{!-- </td>
     <td> --}}
       {{!-- {{ recipe.user }}
       <a href="{{ user }} /recipes/edit/{{recipe.id}}">Edit</a>  --}}
     {{!-- </td>
   </tr> --}}
+ <div class="wrapper ">
+  
+  <div>
+    <a href="/recipes/{{recipe.id}}">
+      <p>
+        {{recipe.name}}
+      </p>
+    </a>
+  </div>
+ </div>
   {{/each}}
 {{!-- </table> --}}
 
 
- <div class="grid ">
- 
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  {{!-- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
+  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div> --}}
 
-
- </div>
 
 
 <br>
-<a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a>
+<footer><a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a></footer>
 
+<style>
+  
+  body {
+    background: url(https://i.imgur.com/eAdxEkg.jpg);
+    margin: 10px;
+    padding: 10px;
+    background-size: cover;
+  }
+  
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: space-around;
+    grid-column-gap: 2em;
+    grid-row-end: 2em;
+  }
+  .wrapper > div:nth-child(even){
+    background: white;
+  }
+  .wrapper > div:nth-child(odd) {
+    background: rgb(160, 156, 156);
+  }
 
+a > p {
+ display: inline; 
+}
+
+</style>
 
 {{!-- 
 a form with one 

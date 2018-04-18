@@ -1,12 +1,125 @@
-<title></title>
-<header></header>
+<button class="btn"> <a href="/recipes/">Not interested in signing up for our newsletter or site? No worries! Head on over to check out our recipes!</a></button>
+
+<body>
+  <div class="bg-img">
+    <form action="/action_page.php">
+      <div class="container">
+        <h1>Login</h1>
+
+        <label for="email">
+          <b>Email</b>
+        </label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="psw">
+          <b>Password</b>
+        </label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" class="btn">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
 
 
+<form action="action_page.php">
+  <div class="container">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Healthy Kids, Healthy Start!</p>
+  </div>
 
-<p style="font-size:16px;"><a href="/recipes/"> Recipes </a></p>
-{{!-- 
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+
+{{!--
 <img src="https://i.imgur.com/BacMzfj.jpg"></img> --}}
 
+<style>
+  body, html {
+    height: 100%;
+  }
+
+  .btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
 
 
-<footer><a href="https://www.buzzfeed.com/tastyjunior"<a/>All recipes grabbed from the BuzzFeed Tasty Junior website!</footer>
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .center, .bg-img {
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  }
+
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .btn {
+    background-color: rgb(189, 247, 141);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    opacity: 0.9;
+  }
+
+  .btn:hover {
+    opacity: 1;
+  }
+</style>
+
+{{!-- <footer>
+  <a href="https://www.buzzfeed.com/tastyjunior" <a/>All recipes 
+  grabbed from the BuzzFeed Tasty Junior website!</footer> --}}
