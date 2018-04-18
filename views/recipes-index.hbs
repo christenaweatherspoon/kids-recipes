@@ -1,49 +1,51 @@
-
-<h1>Recipes:</h1>
-
-<table>
+<footer>
+  <a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a>
+</footer>
+<h1>
+  Recipes:</h1>
   {{#each recipes as |recipe|}}
-  {{!-- <tr>
-    <td> --}}
-      {{!-- <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a> --}}
-    {{!-- </td>
-    <td> --}}
-      {{!-- {{ recipe.user }}
-      <a href="{{ user }} /recipes/edit/{{recipe.id}}">Edit</a>  --}}
-    {{!-- </td>
-  </tr> --}}
- <div class="wrapper ">
-  
-  <div>
-    <a href="/recipes/{{recipe.id}}">
-      <p>
-        {{recipe.name}}
-      </p>
-    </a>
+    <div class="row">
+    <div class="column">
+      <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
+    </div>
+   {{/each}}
   </div>
- </div>
-  {{/each}}
-{{!-- </table> --}}
-
-
-  {{!-- <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div>
-  <div><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></div> --}}
-
-
-
-<br>
-<footer><a href="/recipes/new">Want to add a recipe to this list? Go ahead! Click here!</a></footer>
-
+  </div>
 <style>
-  
+
+  footer{
+    text-align: center;
+  }
+  .column {
+    float: left;
+    width: 50%;
+    flex: 50%;
+    background: #a4d555;
+
+  }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
   body {
+    background-image: url(https://i.imgur.com/FmxOiqW.jpg);
+    font-family: 'Lato', sans-serif;
+    background-size: cover;
+    background-position: sticky;
+    font-size: 20px;
+    margin: 25px;
+    padding: 35px;
+  }
+
+  h1 {
+    font-family: 'Coming Soon', cursive;
+    font-size: 60px;
+    text-align: center;
+    color: #ff599f;
+  }
+
+  /*  body {
     background: url(https://i.imgur.com/eAdxEkg.jpg);
     margin: 10px;
     padding: 10px;
@@ -68,10 +70,7 @@
 a > p {
  display: inline; 
 }
-
+*/
 </style>
 
-{{!-- 
-a form with one 
-
- --}}
+{{!-- a form with one --}}
