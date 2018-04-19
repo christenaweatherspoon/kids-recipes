@@ -1,8 +1,7 @@
-/* h1 {
-  color: #e9c904;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-} */
+body {
+  background-image: url(https://i.imgur.com/7WgClhj.jpg);
+  background-size: cover;
+}
 
 p {
   font-family: 'Lato', sans-serif;
@@ -14,16 +13,3 @@ footer {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
-
-/* .wrapper div:nth-child(even) {
-  background: white;
-}
-
-.wrapper div:nth-child(odd) {
-  background: #7cdbd5;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
