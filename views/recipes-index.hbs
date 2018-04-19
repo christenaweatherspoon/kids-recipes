@@ -1,4 +1,4 @@
-<div class="topnav">
+<body> <div class="topnav">
   <a class="active" href="/recipes/">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
@@ -6,7 +6,7 @@
 </div>
 
 <h1> Recipes</h1>
-  <table>
+ <section><table>
   {{#each recipes as |recipe|}}
   <tr>
     <td>
@@ -18,15 +18,21 @@
   {{/each}}
     </td>
   </tr>
-</table>
+</table></section>
+  
+ 
 
-
+</body>
 
 <style>
  body {
     padding: 30px;
     margin: 30px;
   }
+
+  section { 
+    display: block;
+}
 .topnav {
     background-color: rgb(171, 240, 144);
     overflow: hidden;
@@ -89,6 +95,7 @@ tr:hover {
     font-size: 80px;
     text-align: center;
     color: #ff599f;
+    background-color: rgb(171, 240, 144);
   }
 
 
