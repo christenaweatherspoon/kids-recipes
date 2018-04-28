@@ -12,7 +12,7 @@ router.get('/:id', (req,res) => {
 
   Recipes.findById(req.params.id)
     .then( (recipes ) => {
-        res.render('show', { recipes} )
+        res.json( { recipes: recipes} )
     })
     .catch( err => console.log(err))
 });
@@ -20,7 +20,8 @@ router.get('/:id', (req,res) => {
 router.get('/', (req, res) => {
     Recipes.find({})
       .then(recipes => {
-        res.render('recipes-index', { recipes });
+        console.log(recipes)
+        res.json(recipes)
       })
       .catch(err => console.log(err))
 })
@@ -28,7 +29,7 @@ router.get('/', (req, res) => {
 router.get('/edit/:id', (req, res) => {
   Recipes.findOne({ _id: req.params.id } )
     .then( (recipes ) => {
-      res.render('edit', { recipes } )
+      res.json({ recipes } )
     })
 })
 
