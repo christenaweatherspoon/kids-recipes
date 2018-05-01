@@ -1,34 +1,34 @@
-const express = require("express")
+const express = require('express')
 const router = express.Router()
 const Recipes = require('../models/recipes')
 
-let username = ''
+// AS: Be consistent on indentation here too! This username variable isn't used, so I would remove it
 
-router.get('/new', (req,res) => {
+// AS: These routes look really good! 👍
+router.get('/new', (req, res) => {
   res.render('new')
 })
 
-router.get('/:id', (req,res) => {
-
+router.get('/:id', (req, res) => {
   Recipes.findById(req.params.id)
-    .then( (recipes ) => {
-        res.render('show', { recipes} )
+    .then((recipes) => {
+      res.render('show', { recipes })
     })
-    .catch( err => console.log(err))
-});
+    .catch(err => console.log(err))
+})
 
 router.get('/', (req, res) => {
-    Recipes.find({})
-      .then(recipes => {
-        res.render('recipes-index', { recipes });
-      })
-      .catch(err => console.log(err))
+  Recipes.find({})
+    .then(recipes => {
+      res.render('recipes-index', { recipes })
+    })
+    .catch(err => console.log(err))
 })
 
 router.get('/edit/:id', (req, res) => {
-  Recipes.findOne({ _id: req.params.id } )
-    .then( (recipes ) => {
-      res.render('edit', { recipes } )
+  Recipes.findOne({ _id: req.params.id })
+    .then((recipes) => {
+      res.render('edit', { recipes })
     })
 })
 
@@ -47,10 +47,10 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    Recipes.findOneAndRemove({ _id: req.params.id })
-      .then(() => {
-        res.redirect('/recipes')
-      })
-  })
+  Recipes.findOneAndRemove({ _id: req.params.id })
+    .then(() => {
+      res.redirect('/recipes')
+    })
+})
 
 module.exports = router
