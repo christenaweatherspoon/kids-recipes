@@ -1,20 +1,24 @@
 {
   "name": "kids-recipes",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
+    "knex": "^0.14.6",
     "method-override": "^2.3.10",
-    "mongoose": "^5.0.14"
+    "mongoose": "^5.0.14",
+    "objection": "^1.1.8",
+    "pg": "^7.4.3"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node index.js"
-   },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/greatdiamondmoon/kids-recipes.git"
@@ -24,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/greatdiamondmoon/kids-recipes/issues"
   },
-  "homepage": "https://github.com/greatdiamondmoon/kids-recipes#readme"
+  "homepage": "https://github.com/greatdiamondmoon/kids-recipes#readme",
+  "description": ""
 }
